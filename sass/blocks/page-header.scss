@@ -1,0 +1,12 @@
+.page-header {
+	@include container;
+	position: relative;
+	background: #fff;
+}
+
+.page-header__logo {
+	padding: 22px 0;
+	text-align: center;
+
+	border-bottom: 1px solid #f1f1f1;
+}
