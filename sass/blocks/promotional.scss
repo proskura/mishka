@@ -1,0 +1,30 @@
+.promotional {
+	@include container;
+	padding-bottom: 41px;
+
+	background-color: #fff;
+	background-image: url("../img/bg-zigzag-line.svg");
+	-webkit-background-size: auto 6px;
+	background-size: auto 6px;
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	
+}
+
+.promotional__item {
+	@include inner-container;
+	position: relative;
+}
+
+.promotional__category {
+	position: absolute;
+	top: 64px;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+
+	color: #63d1bb;
+
+	text-transform: uppercase;
+}

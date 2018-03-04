@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -35,7 +36,7 @@
 		<section class="main-categories">
 			<header class="main-categories__header">
 				<h2 class="visually-hidden">Категории товаров</h2>
-				<b>Милые штучки ручной работы&nbsp;для&nbsp;дома</b>
+				<b>Милые штуки ручной работы&nbsp;для&nbsp;дома</b>
 			</header>
 			<ul class="main-categories__list">
 				<li class="main-categories__item main-categories__item--interior"><a href="">Предметы<br> интерьера</a></li>
@@ -43,11 +44,11 @@
 			</ul>
 		</section>
 		<section class="promotional">
-			<h2 class="promotional__title">Акционные товары</h2>
+			<h2 class="visually-hidden">Акционные товары</h2>
 			<div class="promotional__item">
 				<b class="promotional__category">Товар недели</b>
 				<div class="product">
-					<h3 class="product__name">Вязаные корзинки</h3>
+					<h1 class="product__name">Вязаные корзинки</h1>
 					<p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 					<table class="product__params">
 						<tr>
@@ -63,22 +64,24 @@
 							<td class="product__value">15 см</td>
 						</tr>
 					</table>
-					<img class="product__foto" src="http://placehold.it/260x315" alt="Фото корзинки">
+					<img class="product__foto" src="img/triple-set-mobile@1x.jpg" alt="Фото корзинки">
 					<p class="product__price">Цена: <b>990</b> руб.</p>
 				</div>
 				<a class="promotional__btn btn" href="">Заказать</a>
 			</div>
 		</section>
 		<section class="about">
-			<h2 class="about__title">Коротко о нас</h2>
-			<ul class="about__list">
-				<li class="about__item">Экологически чистые материалы</li>
-				<li class="about__item">Скандинавский стиль по российской цене</li>
-				<li class="about__item">Увеличивает лайки на фотографиях</li>
-				<li class="about__item">Связано вручную с любовью и умилением</li>
-				<li class="about__item">Поддержка отечественного производителя</li>
-				<li class="about__item">Поставлятся в подарочной упаковке</li>
-			</ul>
+			<div class="about__wrapper">
+				<h2 class="about__title">Коротко о нас:</h2>
+				<ul class="about__list">
+					<li class="about__item about__item--ecology">Экологически чистые материалы</li>
+					<li class="about__item about__item--price">Скандинавский стиль по российской цене</li>
+					<li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
+					<li class="about__item about__item--handmade">Связано вручную с любовью и умилением</li>
+					<li class="about__item about__item--native">Поддержка отечественного производителя</li>
+					<li class="about__item about__item--giftwrap">Поставлятся в подарочной упаковке</li>
+				</ul>
+			</div>
 		</section>
 		<section class="reviews">
 			<h2 class="reviews__title">Отзывы</h2>
