@@ -47,9 +47,53 @@
 }
 
 .main-categories__item--interior {
+	position: relative;
 	background-color: #63d1bb;
+	&:hover, &:focus {
+		background-color: #59d5bc;
+		svg {
+			opacity: .7;
+		}
+	}
+
+	a {
+		&:active {
+			opacity: .3;
+		}
+	}
+
+	svg {
+		position: absolute;
+		top: 23px;
+		right: 40px;
+		width: 40px;
+		height: 62px;
+		opacity: .5;
+	}
 }
 
 .main-categories__item--toys {
+	position: relative;
 	background-color: #56c3b2;
+	&:hover, &:focus {
+		background-color: #46c1ae;
+		svg {
+			opacity: .7;
+		}
+	}
+
+	a {
+		&:active {
+			opacity: .3;
+		}
+	}
+
+	svg {
+		position: absolute;
+		top: 23px;
+		right: 30px;
+		width: 60px;
+		height: 60px;
+		opacity: .5;
+	}
 }
