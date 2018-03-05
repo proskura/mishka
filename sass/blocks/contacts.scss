@@ -1,0 +1,52 @@
+.contacts {
+	@include container;
+	position: relative;
+	background-color: #fff;
+	padding-bottom: 40px;
+}
+
+.contacts__wrapper {
+	@include inner-container;
+}
+
+.contacts__title {
+	margin: 0;
+	margin-bottom: 11px;
+	padding: 0;
+	padding-top: 40px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.contacts__item {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: normal;
+	font-size: 0;
+}
+
+.contacts__item:last-child {
+	padding-bottom: 530px;
+}
+
+.contacts__item-title,
+.contacts__item-content {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 30px;
+	vertical-align: top;
+}
+
+.contacts__item-title {
+	width: 30%;
+}
+
+.contacts-btn {
+	margin-top: 515px;
+}
+
+.contacts__map {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	bottom: 126px;
+}
