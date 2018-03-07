@@ -5,20 +5,43 @@
 
 .page-footer__wrapper {
 	@include inner-container;
+	position: relative;
+	@media(min-width: $tablet-widths) {
+		display: block;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 
 .page-footer__social {
+	position: absolute;
+	top: 24px;
+	right: 30px;
+	left: 30px;
 	border-bottom: 1px solid #e5e5e5;
-	text-align: center;
+
+	@media(min-width: $tablet-widths) {
+		position: static;
+		border: none;
+	}
 }
 
 .page-footer__copyright {
 	margin: 0;
-	margin-top: 28px;
+	
 	padding-bottom: 23px;
+	padding-top: 103px;
 	font-size: 18px;
 	line-height: 18px;
 	text-align: center;
+
+	@media (min-width: $tablet-widths) {
+		float: right;
+		width: 33.333333%;
+		margin: 0;
+		padding: 0;
+		text-align: right;
+	}
 }
 
 .page-footer__copyright-link {
@@ -42,5 +65,16 @@
 
 	&:active {
 		opacity: .3;
+	}
+}
+
+.page-footer__logo {
+	display: none;
+
+	@media(min-width: $tablet-widths) {
+		display: block;
+		float: left;
+		width: 33.333333%;
+		vertical-align: middle;
 	}
 }
