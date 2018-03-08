@@ -3,10 +3,34 @@
 	position: relative;
 	background-color: #fff;
 	padding-bottom: 40px;
+
+	@media (min-width: $tablet-widths) {
+		padding-bottom: 57px;
+	}
+
+	@media (min-width: $desktop-widths) {
+		@include clearfix;
+		padding-top: 70px;
+		padding-bottom: 106px;
+	}
 }
 
 .contacts__wrapper {
 	@include inner-container;
+}
+
+.contacts__inner-wrapper {
+	@media(min-width: $desktop-widths) {
+		float: left;
+		box-sizing: border-box;
+		width: 50%;
+		padding-left: 175px;
+	}
+}
+
+.contacts__text-wrapper {
+	@include clearfix;
+
 }
 
 .contacts__title {
@@ -16,16 +40,57 @@
 	padding-top: 40px;
 	font-size: 24px;
 	line-height: 30px;
+
+	@media (min-width: $tablet-widths) {
+		position: relative;
+		font-size: 40px;
+		line-height: 50px;
+		margin-bottom: 0;
+		padding-top: 60px; 
+		padding-bottom: 36px;
+
+		&::after {
+			content: "";
+			position: absolute;
+
+			width: 47px;
+			height: 81px;
+
+			right: 0px;
+			bottom: 15px;
+
+			background: url("../img/icon-flag.svg") no-repeat 50% 50%;
+		}
+	}
+
+	@media (min-width: $desktop-widths) {
+		&::after {
+			left: -112px;
+			right: auto;
+		}
+	}
 }
 
 .contacts__item {
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: normal;
 	font-size: 0;
+
+	@media (min-width: $tablet-widths) {
+		float: left;
+		width: 50%;
+
+	}
+
+	@media (min-width: $desktop-widths) {
+		float: none;
+		width: 100%;
+	}
 }
 
 .contacts__item:last-child {
-	padding-bottom: 530px;
+	/*padding-bottom: 530px;*/
+	/*float: none;*/
 }
 
 .contacts__item-title,
@@ -34,10 +99,17 @@
 	font-size: 14px;
 	line-height: 30px;
 	vertical-align: top;
+
+	@media(min-width: $tablet-widths) {
+		font-size: 16px;
+	}
 }
 
 .contacts__item-title {
 	width: 30%;
+	@media(min-width: $tablet-widths) {
+		width: 20.32%;
+	}
 }
 
 .contacts__item-content i {
@@ -47,6 +119,19 @@
 
 .contacts-btn {
 	margin-top: 515px;
+
+	@media(min-width: $tablet-widths) {
+		width: 30%;
+		margin-top: 556px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media(min-width: $desktop-widths) {
+		margin-top: 77px;
+		margin-left: 0;
+		width: 230px;
+	}
 }
 
 .contacts__map {
@@ -54,4 +139,13 @@
 	line-height: 0;
 	position: absolute;
 	bottom: 126px;
+
+	@media(min-width: $tablet-widths) {
+		bottom: 164px;
+	}
+
+	@media(min-width: $desktop-widths) {
+		position: static;
+		float: left;
+	}
 }
