@@ -1,7 +1,10 @@
 .page-header {
 	@include container;
 	position: relative;
-	background-color: transparent;
+	background-color: #fff;
+	@media(min-width: $tablet-widths) {
+		background-color: transparent;
+	}
 }
 
 .page-header__wrapper {	
