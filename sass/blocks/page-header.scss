@@ -1,0 +1,32 @@
+.page-header {
+	@include container;
+	position: relative;
+	background-color: #fff;
+	@media(min-width: $tablet-widths) {
+		background-color: transparent;
+	}
+}
+
+.page-header__wrapper {	
+	position: relative;
+}
+
+.page-header__logo {
+	
+	padding: 22px 0;
+	text-align: center;
+
+	border-bottom: 1px solid #f1f1f1;
+	background-color: #fff;
+
+	@media(min-width: $tablet-widths) {
+		padding: 21px 50px;
+		text-align: left;
+		line-height: 0;
+	}
+
+	@media(min-width: $desktop-widths) {
+		text-align: center;
+		padding: 8px 50px;
+	}
+}

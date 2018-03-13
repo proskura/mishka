@@ -1,0 +1,22 @@
+.social-links {
+	@include reset-list;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 30px;
+	font-size: 0;
+	line-height: 0;
+
+	@media(min-width: $tablet-widths) {
+		padding-bottom: 0;
+	}
+
+
+}
+.social-links__item {
+	margin-right: 40px;
+	display: inline-block;
+	&:last-child {
+		margin-right: 0;
+	}
+}

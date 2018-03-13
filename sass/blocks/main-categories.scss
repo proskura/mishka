@@ -1,0 +1,157 @@
+.main-categories {
+	@include container;
+
+	background-image: url("../img/hero-mobile@1x.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+
+	@media(min-width: $tablet-widths) {
+		position: relative;
+		margin-top: -60px;
+		z-index: -2;
+
+		background-image: url("../img/hero-desktop@1x.jpg");
+		
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 24px;
+			background-image: url("../img/bg-zigzag-fill.svg");
+			background-size: auto 24px;
+		}
+	}
+}
+
+.main-categories__header {
+	@include inner-container;
+	padding-top: 87px;
+	padding-bottom: 124px;
+	font-size: 24px;
+	line-height: 30px;
+
+	text-align: center;
+
+	@media(min-width: $tablet-widths) {
+		font-size: 40px;
+		line-height: 50px;
+		padding-top: 154px;
+		padding-bottom: 374px;
+	}
+
+	@media(min-width: $desktop-widths) {
+		font-size: 50px;
+		line-height: 57px;
+		padding-bottom: 358px;
+	}
+}
+
+.main-categories__list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	font-family: Tahoma, Arial, sans-serif;
+	/*font-size: 0;*/
+
+	@media(min-width: $tablet-widths) {
+		@include clearfix;
+		@include inner-container;
+	}
+}
+
+.main-categories__item {
+
+	font-size: 18px;
+	line-height: 24px;
+	color: #fff;
+
+	background-color: #63d1bb;
+
+	&:hover, &:focus {
+		margin-top: -5px;
+		padding-bottom: 5px;
+	}
+
+	a {
+		padding: 0 30px;
+		display: block;
+
+		padding-top: 26px;
+		padding-bottom: 26px; 
+
+		color: inherit;	
+	}
+
+	@media(min-width: $tablet-widths) {
+		float: left;
+		width: 50%;
+
+		font-size: 20px;
+		line-height: 30px;
+
+		a {
+			padding: 0 35px;
+			padding-top: 30px;
+			padding-bottom: 44px; 
+		}
+	}
+}
+
+.main-categories__item--interior {
+	position: relative;
+	background-color: #63d1bb;
+	&:hover, &:focus {
+		background-color: #59d5bc;
+		svg {
+			opacity: .7;
+		}
+	}
+
+	a {
+		&:active {
+			opacity: .3;
+		}
+	}
+
+	svg {
+		position: absolute;
+		top: 23px;
+		right: 40px;
+		width: 40px;
+		height: 62px;
+		opacity: .5;
+	}
+}
+
+.main-categories__item--toys {
+	position: relative;
+	background-color: #56c3b2;
+	&:hover, &:focus {
+		background-color: #46c1ae;
+		svg {
+			opacity: .7;
+		}
+	}
+
+	a {
+		&:active {
+			opacity: .3;
+		}
+	}
+
+	svg {
+
+		position: absolute;
+		top: 23px;
+		right: 30px;
+		width: 60px;
+		height: 60px;
+
+		fill: #149080;
+		opacity: .5;
+	}
+}

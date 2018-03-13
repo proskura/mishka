@@ -1,0 +1,40 @@
+@mixin outline {
+	outline: 2px solid red;
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin container {
+	width: 320px;
+	margin: 0 auto;
+
+	@media (min-width: $tablet-widths) {
+		width: 768px;
+		margin: 0 auto
+	}
+
+	@media (min-width: $desktop-widths) {
+		width: 1150px;
+		margin: 0 auto;
+	}
+}
+
+@mixin inner-container {
+	margin: 0 30px;
+
+	@media (min-width: $tablet-widths) {
+		margin: 0 50px;
+	}
+}
+
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}

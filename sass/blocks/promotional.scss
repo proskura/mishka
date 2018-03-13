@@ -1,0 +1,71 @@
+.promotional {
+	@include container;
+	padding-top: 28px;
+
+	background-color: #fff;
+
+	background-image: url("../img/bg-zigzag-line.svg");
+	background-size: auto 6px;
+	background-repeat: repeat-x;
+	background-position: bottom center;
+
+	@media(min-width: $tablet-widths) {
+		padding-top: 31px;
+		min-height: 580px;
+
+		background-size: auto 17px;
+	}
+
+	@media(min-width: $desktop-widths) {
+		min-height: 730px;
+		padding-top: 54px;
+
+		background-size: auto 23px;
+	}
+}
+
+.promotional__category {
+	position: absolute;
+	top: 36px;
+	left: 0;
+
+	font-size: 16px;
+	line-height: 16px;
+
+	color: #63d1bb;
+	text-transform: uppercase;
+
+	@media(min-width: $tablet-widths) {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		top: 9px;
+		left: auto;
+		right: 0;
+
+		width: 135px;
+		padding-left: 30px;
+		padding-right: 30px;
+		text-align: center;
+	}
+
+	@media(min-width: $desktop-widths) {
+		left: 0;
+		right: auto;
+		top: 66px;
+	}
+}
+
+.promotional__item {
+	@include inner-container;
+	position: relative;
+	padding-bottom: 42px;
+
+	@media(min-width: $tablet-widths) {
+		padding-bottom: 68px;
+	}
+
+	@media(min-width: $desktop-widths) {
+		padding-bottom: 96px;
+	}
+}
