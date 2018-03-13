@@ -1,0 +1,39 @@
+.catalog {
+	@include container;
+}
+
+.catalog__title {
+	margin: 0;
+	padding-top: 77px;
+	padding-bottom: 83px;
+	font-size: 24px;
+	line-height: 30px;
+
+	text-align: center;
+
+	@media(min-width: $tablet-widths) {
+		position: relative;
+		margin-top: -60px;
+		padding-top: 95px;
+		padding-bottom: 95px;
+
+		font-size: 40px;
+		line-height: 50px;
+
+		background-image: url("../img/bg-zigzag-fill.svg");
+		-webkit-background-size: auto 24px;
+		background-size: auto 24px;
+		background-repeat: repeat-x;
+		background-position: center bottom;
+
+		z-index: -2;
+	}
+
+	@media(min-width: $desktop-widths) {
+		padding-bottom: 120px;
+		font-size: 50px;
+		line-height: 57px;
+		-webkit-background-size: auto 34px;
+		background-size: auto 34px;
+	}
+}
