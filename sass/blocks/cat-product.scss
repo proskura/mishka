@@ -1,0 +1,165 @@
+.cat-product {
+	border: 1px solid #ececec;
+
+	&:hover {
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	&:active {
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	@media(min-width: $tablet-widths) {
+		@include clearfix;
+		position: relative;
+	}
+
+	@media(min-width: $desktop-widths) {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
+.cat-product__text-wrap {
+	margin: 0 27px;
+	font-size: 0;
+	
+	@media(min-width: $tablet-widths) {
+		float: right;
+		margin: 0 5%;
+		width: 40%;
+		height: 100%;
+		padding-bottom: 73px;
+	}
+
+	@media(min-width: $desktop-widths) {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: space-between;
+		
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 0 8%;
+				
+		padding-bottom: 0;
+
+	}
+}
+
+.cat-product__name {
+	margin-top: 26px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	line-height: 24px;
+
+	a {
+		color: #000;
+	}
+
+	&:hover, &:focus {
+		opacity: 0.6;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+
+	@media(min-width: $tablet-widths) {
+		font-size: 18px;
+	}
+}
+
+.cat-product__params {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 19px;
+
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+	color: #444;
+
+	@media(min-width: $tablet-widths) {
+		font-size: 15px;
+	}
+
+	@media(min-width: $desktop-widths) {
+		flex-grow: 1;
+	}
+}
+
+
+.cat-product__price-wrap {
+	border-top: 1px solid #f1f1f1;
+	@media(min-width: $tablet-widths) {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 40%;
+		margin: 0 5%;
+	}
+
+	@media(min-width: $desktop-widths) {
+		position: static;
+		width: auto;
+		margin: 0;
+	}
+}
+
+.cat-product__price {
+	display: inline-block;
+	width: 50%;
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 28px;
+	font-size: 14px;
+	line-height: 24px;
+
+	@media(min-width: $tablet-widths) {
+		font-size: 16px;
+	}
+}
+
+.cat-product__add-to-cart {
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+	font-size: 0;
+
+	svg {
+		opacity: 0.6;
+	}
+
+	&:hover, &focus {
+		svg {
+			opacity: 1;
+			fill: #63d1bb;
+		}
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+}
+
+.cat-product__photo {
+	@media(min-width: $tablet-widths) {
+		float: left;
+		width: 50%;
+		line-height: 0;
+	}
+
+	@media(min-width: $desktop-widths) {
+		float: none;
+		width: auto;
+	}
+}
+
+.imd {
+	width: 100%;
+}

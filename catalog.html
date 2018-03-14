@@ -91,62 +91,90 @@
 	</header>
 	<main class=catalog>
 		<h1 class="catalog__title">Каталог товаров</h1>
-		<ul class="catalog__list">
-			<li class="catalog__item">
-				<div class="product">
-					<h3 class="product__name"><a href="">Зайчик-попрыгайчик</a></h3>
-					<table class="product__params">
-						<tr>
-							<td class="product__key">Рост</td>
-							<td class="product__value">30 см</td>
-						</tr>
-						<tr>
-							<td class="product__key">вес</td>
-							<td class="product__value">200 г</td>
-						</tr>
-					</table>
-					<a href="" class="product__foto" ><img src="http://placehold.it/260x195" alt="Фото Зайчика-попрыгайчика"></a>
-					<p class="product__price"><b>1200</b> руб.</p>
-					<p class="product__add-to-cart"><a class="cart-add" href="">Добавить в корзину</a></p>
-				</div>
-			</li>
-			<li class="catalog__item">
-				<div class="product">
-					<h3 class="product__name"><a href="">Корзинка для белья</a></h3>
-					<table class="product__params">
-						<tr>
-							<td class="product__key">Диаметр</td>
-							<td class="product__value">15 см</td>
-						</tr>
-						<tr>
-							<td class="product__key">Высота</td>
-							<td class="product__value">10 см</td>
-						</tr>
-					</table>
-					<a href="" class="product__foto" ><img src="http://placehold.it/260x195" alt="Фото Корзинки для белья"></a>
-					<p class="product__price"><b>690</b> руб.</p>
-					<p class="product__add-to-cart"><a class="cart-add" href="">Добавить в корзину</a></p>
-				</div>
-			</li>
-			<li class="catalog__item">
-				<div class="product">
-					<h3 class="product__name"><a href="">Большая корзина для игрушек</a></h3>
-					<table class="product__params">
-						<tr>
-							<td class="product__key">Диаметр</td>
-							<td class="product__value">30 см</td>
-						</tr>
-						<tr>
-							<td class="product__key">Высота</td>
-							<td class="product__value">30 см</td>
-						</tr>
-					</table>
-					<a href="" class="product__foto" ><img src="http://placehold.it/260x195" alt="Фото Большой корзины для игрушек"></a>
-					<p class="product__price"><b>1500</b> руб.</p>
-					<p class="product__add-to-cart"><a class="cart-add" href="">Добавить в корзину</a></p>
-				</div>
-			</li>
-		</ul>
+		<div class="catalog__content-wrap">
+			<ul class="catalog__list">
+				<li class="catalog__item">
+					<div class="cat-product">
+						<a href="" class="cat-product__photo" >
+							<picture>
+								<source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg">
+								<source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg">
+								<img src="img/photo-1-mobile@1x.jpg" alt="Фото Зайчика-попрыгайчика">	
+							</picture>
+							
+						</a>
+						<div class="cat-product__text-wrap">
+							<h3 class="cat-product__name"><a href="">Зайчик-попрыгайчик</a></h3>
+							<p class="cat-product__params">Рост 30 см, вес 200 г</p>
+							<div class="cat-product__price-wrap">
+								<p class="cat-product__price"><b>1200</b> руб.</p>
+								<p class="cat-product__add-to-cart">
+									<a class="cart-add" href="">
+										<svg width="20" height="19">
+											<use xlink:href="#icon-cart" />
+										</svg>Добавить в корзину
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="catalog__item">
+					<div class="cat-product">
+						<a href="" class="cat-product__photo" >
+							<picture>
+								<source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg">
+								<source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg">
+								<img src="img/photo-2-mobile@1x.jpg" alt="Фото Корзинки для белья">	
+							</picture>
+							
+						</a>
+						<div class="cat-product__text-wrap">
+							<h3 class="cat-product__name"><a href="">Корзинка для белья</a></h3>
+							<p class="cat-product__params">Диаметр 15 см, высота 10 см</p>
+							<div class="cat-product__price-wrap">
+								<p class="cat-product__price"><b>690</b> руб.</p>
+								<p class="cat-product__add-to-cart">
+									<a class="cart-add" href="">
+										<svg width="20" height="19">
+											<use xlink:href="#icon-cart" />
+										</svg>Добавить в корзину
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="catalog__item">
+					<div class="cat-product">
+						<div class="imd">
+							<a href="" class="cat-product__photo" >
+								<picture>
+									<source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg">
+									<source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg">
+									<img src="img/photo-3-mobile@1x.jpg" alt="Фото Большой корзинки для игрушек">	
+								</picture>
+								
+							</a>
+						</div>
+						<div class="cat-product__text-wrap">
+							<h3 class="cat-product__name"><a href="">Большая корзинка для игрушек</a></h3>
+							<p class="cat-product__params">Диаметр 15 см, высота 10 см</p>
+							<div class="cat-product__price-wrap">
+								<p class="cat-product__price"><b>690</b> руб.</p>
+								<p class="cat-product__add-to-cart">
+									<a class="cart-add" href="">
+										<svg width="20" height="19">
+											<use xlink:href="#icon-cart" />
+										</svg>Добавить в корзину
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<section class="video-info">
 			<h2 class="visually-hidden">Видео уроки</h2>
 			<div class="video-info__item tutorial">
@@ -206,6 +234,7 @@
 			
 		</div>
 	</footer>
+	<script type="text/javascript" src="js/picturefill.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
