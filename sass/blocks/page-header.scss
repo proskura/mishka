@@ -2,6 +2,7 @@
 	@include container;
 	position: relative;
 	background-color: #fff;
+	z-index: 3;
 	@media(min-width: $tablet-widths) {
 		background-color: transparent;
 	}
@@ -23,6 +24,13 @@
 		padding: 21px 50px;
 		text-align: left;
 		line-height: 0;
+		&:hover, &:focus {
+			opacity: 0.6;
+		}
+
+		&:active {
+			opacity: 0.3;
+		}
 	}
 
 	@media(min-width: $desktop-widths) {

@@ -1,0 +1,20 @@
+.video-info {
+	@include inner-container;
+	border: 1px solid #fff;
+}
+
+.video-info__item {
+	margin-bottom: 57px;
+
+	&:hover {
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	&:active {
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	@media(min-width: $tablet-widths) {
+		margin-bottom: 63px;
+	}
+}
