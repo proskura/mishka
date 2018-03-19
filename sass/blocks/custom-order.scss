@@ -14,18 +14,40 @@
 	text-align: center;
 
 	background-color: #f4f4f4;
+
+	@media(min-width: $tablet-widths) {
+		margin-top: -60px;
+		padding-top: 93px;
+		padding-bottom: 96px;
+		font-size: 40px;
+		line-height: 50px;
+
+		background-image: url("../img/bg-zigzag-fill.svg");
+		-webkit-background-size: auto 24px;
+		background-size: auto 24px;
+		background-position: center bottom;
+		background-repeat: repeat-x;
+
+	}
 }
 
 .custom-order__description {
 	@include text-wrap;
-	padding-top: 26px;
-	padding-bottom: 25px;
+	margin-top: 26px;
+	margin-bottom: 25px;
 
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 25px;
 	color: #444;
+
+	@media(min-width: $tablet-widths) {
+		margin-top: 60px;
+		margin-bottom: 58px;
+		font-size: 16px;
+		line-height: 30px;
+	}
 
 }
 
@@ -34,6 +56,12 @@
 	padding: 0;
 	padding-bottom: 16px;
 	border: none;
+
+	@media(min-width: $tablet-widths) {
+		@include clearfix;
+		@include text-wrap;
+		margin: 0;
+	}
 
 	legend {
 		position: relative;
@@ -58,6 +86,24 @@
 			height: 1px;
 			background-color: #63d1bb;
 		}
+
+		@media(min-width: $tablet-widths) {
+			width: 25%;
+			float: left;
+
+			padding-top: 18px;
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	.custom-order__block-content {
+		@media(min-width: $tablet-widths) {
+			width: 75%;
+			float: right;
+		}
 	}
 
 	label {
@@ -81,6 +127,12 @@
 			+ input[type="text"] {
 				border-color:  #63d1bb; 
 			}
+		}
+
+		@media(min-width: $tablet-widths) {
+			padding-top: 17px;
+			padding-bottom: 17px;
+			font-size: 18px;
 		}
 	}
 
@@ -107,12 +159,22 @@
 			fill: #63d1bb;
 		}
 
+		@media(min-width: $tablet-widths) {
+			margin-bottom: 25px;
+			font-size: 18px;
+			padding-left: 18px;
+		}
+
 	}
 
 }
 
 
 .custom-order__block--type {
+	@media(min-width: $tablet-widths) {
+		padding-bottom: 25px;
+	}
+
 	label {
 		position: relative;
 		margin-bottom: 22px;
@@ -129,6 +191,16 @@
 			border: 2px solid #444;
 			border-radius: 50%;
 		}
+
+		@media(min-width: $tablet-widths) {
+			margin-bottom: 25px;
+			padding-left: 83px;
+			&:before {
+				width: 48px;
+				height: 48px;
+				margin-top: -24px;
+			}
+		}
 	}
 }
 
@@ -143,6 +215,13 @@
 	
 	background-color: #63d1bb;
 	border-radius: 50%;
+
+	@media(min-width: $tablet-widths) {
+		width: 22px;
+		height: 22px;
+		left: 15px;
+		margin-top: -9px;
+	}
 }
 
 .custom-order__block--color {
@@ -160,7 +239,28 @@
 			left: 0;
 			margin-top: -18px;
 			border: 2px solid #444;
+
+			@media(min-width: $tablet-widths) {
+				width: 48px;
+				height: 48px;
+				margin-top: -24px;
+			}
 		}
+
+		@media(min-width: $tablet-widths) {
+			float: left;
+			width: calc(50% - 83px);
+			
+			margin-bottom: 24px;
+			padding-left: 83px;
+		}
+	}
+
+	@media(min-width: $tablet-widths) {
+		padding-top: 60px;
+		padding-bottom: 37px;
+		background-color: #f4f4f4;
+
 	}
 }
 
@@ -172,28 +272,58 @@
 	left: 9px;
 	width: 22px;
 	height: 22px;
-	margin-top: -11px;
+	margin-top: -9px;
 
 	background-image: url("../img/icon-tick.svg");
 	background-position: center center;
 	background-repeat: no-repeat;
-}
 
-.custom-order__block--fio {
-	label {
-		padding-bottom: 2px;
+	@media(min-width: $tablet-widths) {
+		width: 33px;
+		left: 11px;
 	}
 }
 
-.custom-order__block--contacts {
+.custom-order__block--fio {
+	@media(min-width: $tablet-widths) {
+		padding-top: 50px;
+		padding-bottom: 43px;
+	}
+
+	label {
+		padding-bottom: 2px;
+		@media(min-width: $tablet-widths) {
+			margin-right: 25px;
+		}
+
+	}
+}
+
+.custom-order__block--contact-phone,
+.custom-order__block--contact-email {
 	legend {
 		margin-bottom: 10px;
 	}
 
 	input[type=text] {
-		width: calc(100% - 40px);
-		padding-right: 40px;
+		width: calc(100% - 60px);
+		padding-right: 60px;
+		@media(min-width: $tablet-widths) {
+			background-color: transparent;
+		}
 	}
+
+	@media(min-width: $tablet-widths) {
+		background-color: #f4f4f4;
+	}
+}
+
+.custom-order__block--contact-phone {
+	padding-top: 53px;
+}
+
+.custom-order__block--contact-email {
+	padding-bottom: 42px;
 }
 
 .custom-order__form {
@@ -213,19 +343,22 @@
 		position: absolute;
 		top: 50%;
 		opacity: 0.2;
+		right: 8px;
+
+		@media(min-width: $tablet-widths) {
+			right: 22px;
+		}
 	}
 
 	.custom-order__phone-icon {
 		width: 25px;
 		height: 25px;
-		right: 8px;
 		margin-top: -21px;
 	}
 
 	.custom-order__email-icon {
 		width: 32px;
 		height: 32px;
-		right: 8px;		
 		margin-top: -25px;
 
 	}
@@ -247,14 +380,56 @@
 		&:hover, &:focus {
 			border-color: #63d1bb;
 		}
+
+
+		@media(min-width: $tablet-widths) {
+			width: calc(100% - 36px);
+			padding: 17px 18px;
+		}
+	}
+
+	@media(min-width: $tablet-widths) {
+		padding-top: 63px;
 	}
 }
 
 .custom-order__submit-wrap {
 	@include inner-container;
+	span {
+		display: none;
+	}
+
+	@media(min-width: $tablet-widths) {
+		@include clearfix;
+		.custom-order__submit {
+			float: left;
+			width: 230px;
+		}
+
+		span {
+			float: right;
+			display: block;
+			
+			padding: 8px 0;
+
+			font-size: 16px;
+			line-height: 30px;
+			font-weight: normal;
+		}
+	}
 }
 
 .custom-order__submit {
 	background-color: #fff;
 	margin-bottom: 57px;
+
+	@media(min-width: $tablet-widths) {
+		margin-bottom: 53px;
+	}
+}
+
+.custom-order__block-content .custom-order__item-wrap {
+	@media(min-width: $tablet-widths) {
+		display: flex;
+	}
 }

@@ -57,11 +57,13 @@
     
 		<div class="page-header__wrapper">
 			<div class="page-header__logo">
-		        <picture>
-		          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-		          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg"> 
-		          <img src="img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
-		        </picture>
+				<a href="index.html">
+					<picture>
+					<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+					<source media="(min-width: 768px)" srcset="img/logo-tablet.svg"> 
+					<img src="img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
+					</picture>
+				</a>
     		</div>
 			<nav class="main-nav main-nav--closed">
 				<button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -109,60 +111,79 @@
 		</p>
 		<form class="custom-order__form" action="https://echo.htmlacademy.ru" method="post">
 			<fieldset class="custom-order__block custom-order__block--type">
-				<legend>Тип</legend>				
-				<input class="custom-order__choose-category" type="radio" name="category" id="interior" value="interior" checked="">
-				<label for="interior">Аксессуар для интерьера</label>
-				<input class="custom-order__choose-category" type="radio" name="category" id="toy" value="toy">
-				<label for="toy">Детская игрушка</label>
+				<legend>Тип</legend>
+				<div class="custom-order__block-content">				
+					<input class="custom-order__choose-category" type="radio" name="category" id="interior" value="interior" checked="">
+					<label for="interior">Аксессуар для интерьера</label>
+					<input class="custom-order__choose-category" type="radio" name="category" id="toy" value="toy">
+					<label for="toy">Детская игрушка</label>
+				</div>
 			</fieldset>
 			<fieldset class="custom-order__block custom-order__block--color">
 				<legend>Цвет</legend>
-				<input class="custom-order__check-color" type="checkbox" name="white" id="white" checked="">
-				<label for="white">Белый</label>
-				<input class="custom-order__check-color" type="checkbox" name="grey" id="grey" checked="">
-				<label for="grey">Серый</label>
-				<input class="custom-order__check-color" type="checkbox" name="tiffany" id="tiffany">
-				<label for="tiffany">«Тиффани»</label>
-				<input class="custom-order__check-color" type="checkbox" name="black" id="black">
-				<label for="black">Черный</label>
-				<input class="custom-order__check-color" type="checkbox" name="pink" id="pink">
-				<label for="pink">Розовый</label>
-				<input class="custom-order__check-color" type="checkbox" name="orange" id="orange">
-				<label for="orange">Оранжевый</label>
+				<div class="custom-order__block-content">
+					<input class="custom-order__check-color" type="checkbox" name="white" id="white" checked="">
+					<label for="white">Белый</label>
+					<input class="custom-order__check-color" type="checkbox" name="grey" id="grey" checked="">
+					<label for="grey">Серый</label>
+					<input class="custom-order__check-color" type="checkbox" name="tiffany" id="tiffany">
+					<label for="tiffany">«Тиффани»</label>
+					<input class="custom-order__check-color" type="checkbox" name="black" id="black">
+					<label for="black">Черный</label>
+					<input class="custom-order__check-color" type="checkbox" name="pink" id="pink">
+					<label for="pink">Розовый</label>
+					<input class="custom-order__check-color" type="checkbox" name="orange" id="orange">
+					<label for="orange">Оранжевый</label>
+				</div>
 			</fieldset>
 			<fieldset class="custom-order__block custom-order__block--fio">
 				<legend>ФИО</legend>
-				<label for="second-name">Фамилия:</label>
-				<input class="custom-order__fio" type="text" name="second-name" id="second-name" placeholder="Укажите фамилию">
-				<label for="first-name">Имя:</label>
-				<input class="custom-order__fio" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя" required="">
-				<label for="patronymic">Отчество:</label>
-				<input class="custom-order__fio" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
-			</fieldset>
-			<fieldset class="custom-order__block custom-order__block--contacts">
-				<legend>Тел</legend>
-				<div class="custom-order__item-wrap">
-					<input class="custom-order__phone" type="text" name="phone" placeholder="+7 XXX XX XX">
-					<svg class="custom-order__phone-icon" width="25" height="25">
-						<use xlink:href="#icon-phone" />
-					</svg>
+				<div class="custom-order__block-content">
+					<div class="custom-order__item-wrap">
+						<label for="second-name">Фамилия:</label>
+						<input class="custom-order__fio" type="text" name="second-name" id="second-name" placeholder="Укажите фамилию">
+					</div>
+					<div class="custom-order__item-wrap">
+						<label for="first-name">Имя:</label>
+						<input class="custom-order__fio" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя" required="">
+					</div>
+					<div class="custom-order__item-wrap">
+						<label for="patronymic">Отчество:</label>
+						<input class="custom-order__fio" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+					</div>
 				</div>
 			</fieldset>
-			<fieldset class="custom-order__block custom-order__block--contacts">
+			<fieldset class="custom-order__block custom-order__block--contact-phone">
+				<legend>Тел</legend>
+				<div class="custom-order__block-content">
+					<div class="custom-order__item-wrap">
+						<input class="custom-order__phone" type="text" name="phone" placeholder="+7 XXX XX XX">
+						<svg class="custom-order__phone-icon" width="25" height="25">
+							<use xlink:href="#icon-phone" />
+						</svg>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="custom-order__block custom-order__block--contact-email">
 				<legend>E-mail</legend>
-				<div class="custom-order__item-wrap">
-					<input class="custom-order__email" type="text" name="email" placeholder="Ваш e-mail">
-					<svg class="custom-order__email-icon" width="32" height="22">
-						<use xlink:href="#icon-mail" />
-					</svg>
+				<div class="custom-order__block-content">
+					<div class="custom-order__item-wrap">
+						<input class="custom-order__email" type="text" name="email" placeholder="Ваш e-mail">
+						<svg class="custom-order__email-icon" width="32" height="22">
+							<use xlink:href="#icon-mail" />
+						</svg>
+					</div>
 				</div>
 			</fieldset>
 			<fieldset class="custom-order__block custom-order__block--more">
 				<legend>Доп</legend>
-				<textarea class="custom-order__comment" placeholder="Опишите все ваши пожелания к заказу" rows="6"></textarea>
+				<div class="custom-order__block-content">
+					<textarea class="custom-order__comment" placeholder="Опишите все ваши пожелания к заказу" rows="6"></textarea>
+				</div>
 			</fieldset>
 			<div class="custom-order__submit-wrap">
-				<button class="custom-order__submit btn" type="submit">Отправить заказ</button>	
+				<button class="custom-order__submit btn" type="submit">Отправить заказ</button>
+				<span>Все поля являются обязательными</span>
 			</div>			
 		</form>
 	</main>
